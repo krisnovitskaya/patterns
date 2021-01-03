@@ -1,4 +1,4 @@
-package entities;
+package krisnovitskaya.errands.entities;
 
 public class Employee {
     private Long id;
@@ -7,7 +7,10 @@ public class Employee {
     private String patronymic;
     private String position;
     private Department department;
-    private Boolean master;
+
+    public String getFullName(){
+        return String.format("%s %s %s", surname, name, patronymic);
+    }
 
     public Long getId() {
         return id;
@@ -49,16 +52,10 @@ public class Employee {
         this.department = department;
     }
 
-    public Boolean isMaster() {
-        return master;
-    }
-
-    public void setMaster(Boolean master) {
-        this.master = master;
-    }
-
-    public Employee(String name) {
+    public Employee(String surname, String name, String patronymic) {
+        this.surname = surname;
         this.name = name;
+        this.patronymic = patronymic;
     }
 
     public String getName() {
