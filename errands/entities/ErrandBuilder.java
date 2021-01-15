@@ -1,4 +1,4 @@
-package entities;
+package krisnovitskaya.errands.entities;
 
 import java.util.Date;
 

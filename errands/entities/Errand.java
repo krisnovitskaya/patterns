@@ -1,4 +1,4 @@
-package entities;
+package krisnovitskaya.errands.entities;
 
 import java.util.Date;
 
@@ -23,11 +23,6 @@ public class Errand {
         this.place = place;
         this.createdAt = new Date();
     }
-
-
-
-
-
 
     public enum Status{
         REQUESTED ("Запрошена"),
@@ -134,7 +129,7 @@ public class Errand {
         if(id != null) sb.append("Номер командировки " + id + "\n");
         sb.append("Создана "+ createdAt + "\n");
         if(status != null) sb.append(status.getTitle() + "\n");
-        sb.append("Сотрудник " + employee.getName() + "\n");
+        sb.append("Сотрудник " + employee.getFullName() + "\n");
         if(matter != null) sb.append(matter.getTitle()  + "\n");
         sb.append("Дата начала " + start + "\n");
         if(end != null) sb.append("Окончание " + end + "\n");
