@@ -58,6 +58,10 @@ public class Employee {
         this.patronymic = patronymic;
     }
 
+    public Employee(Long id) {
+        this.id = id;
+    }
+
     public String getName() {
         return name;
     }
