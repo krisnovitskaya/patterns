@@ -3,6 +3,7 @@ package ru.krisnovitskaya.errandstm.services;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import ru.krisnovitskaya.errandstm.dtos.ErrandDto;
+import ru.krisnovitskaya.errandstm.dtos.ErrandSimpleDto;
 import ru.krisnovitskaya.errandstm.entities.Errand;
 import ru.krisnovitskaya.errandstm.repository.ErrandRepository;
 
@@ -35,5 +36,13 @@ public class ErrandService {
             cache.remove(errand.getId());
         }
         errandRepository.delete(errand);
+    }
+
+    public List<ErrandDto> getCurrentErrands(){
+        return errandRepository.getCurrentErrands().stream().map(ErrandDto::new).collect(Collectors.toList());
+    }
+
+    public List<ErrandSimpleDto> getCurrentForPostSecurity(){
+        return errandRepository.getCurrentErrands().stream().map(ErrandSimpleDto::new).collect(Collectors.toList());
     }
 }

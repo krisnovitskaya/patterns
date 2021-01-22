@@ -27,13 +27,13 @@ public class ErrandDto {
         this.id = errand.getId();
         this.employee = errand.getEmployee().getFullName();
         this.createdAt = errand.getCreatedAt();
-        this.status = errand.getStatus().toString();
-        this.matter = errand.getMatter().toString();
+        //this.status = errand.getStatus().toString();
+        //this.matter = errand.getMatter().toString();
         this.start = errand.getStart();
         this.end = errand.getEnd();
         this.place = errand.getPlace();
         this.comment = errand.getComment();
-        this.createdBy = errand.getCreatedBy().getFullName();
-        this.confirmedOrRejectedBy = errand.getConfirmedOrRejectedBy().getFullName();
+        //this.createdBy = errand.getCreatedBy().getFullName();
+        //this.confirmedOrRejectedBy = errand.getConfirmedOrRejectedBy().getFullName();
     }
 }
